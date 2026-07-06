@@ -9,7 +9,7 @@ project_log 는 다음과 같은 방법으로 작성해 주십시오
 
 
 
-1. commit
+#### 1. commit
   ## YYYY-MM-DD
   ### Commit
   - 메시지: 커밋 메시지 내용
@@ -29,7 +29,7 @@ project_log 는 다음과 같은 방법으로 작성해 주십시오
 
 
 
-2. push
+#### 2. push
  - ## YYYY-MM-DD
  - ### push
  - 브랜치: 어떤 브랜치에 push 챘는지
