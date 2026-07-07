@@ -34,6 +34,25 @@ docs(main): README 수정
 
 ---
 
+# 📌 verstion
+
+개발에 사용할 프로그래밍 툴의 버전은 다음과 같습니다.
+
+| 분야       | 기술             | 권장 버전             |
+| -------- | -------------- | ----------------- |
+| AI, 데이터, Backend    | Python         | **3.11.13**       |
+| AI       | NumPy          | **2.3.1**         |
+| 데이터      | Pandas         | **2.3.1**         |
+| Backend  | FastAPI        | **0.116.1**       |
+| Backend  | Uvicorn        | **0.35.0**        |
+| 공통       | Pillow         | **11.3.0**        |
+| Frontend | HTML           | HTML5             |
+| Frontend | CSS            | CSS3              |
+| Frontend | JavaScript     | ES2023+           |
+| Frontend | Node.js        | **22 LTS**        |
+
+---
+
 # 📌 Interface Specification
 
 `interface_spec.md`는 프로젝트의 각 세부 파트에서 공통으로 사용하는 **변수, 함수, 클래스, API** 등을 정의하는 문서입니다.
