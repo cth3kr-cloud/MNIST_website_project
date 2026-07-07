@@ -1,17 +1,17 @@
 commit은 반드시 다음과 같은 구성을 따라야 합니다.
-## 타입: 간단한 설명
+## 타입(파트): 간단한 설명
 타입은 다음과 같습니다.
 
 
 | 타입           | 의미                    | 예시                           |
 | ------------ | --------------------- | ---------------------------- |
-| **feat**     | 새로운 기능 추가             | `feat: 역전파 알고리즘 구현`          |
-| **fix**      | 버그 수정                 | `fix: Softmax 계산 오류 수정`      |
-| **docs**     | 문서 수정                 | `docs: README 업데이트`          |
-| **refactor** | 기능 변화 없는 코드 개선        | `refactor: Network 클래스 분리`   |
-| **style**    | 코드 스타일 변경(공백, 들여쓰기 등) | `style: 코드 포맷 정리`            |
-| **test**     | 테스트 코드 작성             | `test: DenseLayer 단위 테스트 추가` |
-| **chore**    | 설정 파일 수정 등 기타 작업      | `chore: .gitignore 수정`       |
+| **feat**     | 새로운 기능 추가             | `feat(ai): 역전파 알고리즘 구현`          |
+| **fix**      | 버그 수정                 | `fix(ai): Softmax 계산 오류 수정`      |
+| **docs**     | 문서 수정                 | `docs(data): README 업데이트`          |
+| **refactor** | 기능 변화 없는 코드 개선        | `refactor(front-end): Network 클래스 분리`   |
+| **style**    | 코드 스타일 변경(공백, 들여쓰기 등) | `style(backend): 코드 포맷 정리`            |
+| **test**     | 테스트 코드 작성             | `test(ai): DenseLayer 단위 테스트 추가` |
+| **chore**    | 설정 파일 수정 등 기타 작업      | `chore(main): .gitignore 수정`       |
 
 
 
