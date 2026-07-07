@@ -13,6 +13,8 @@ project_log 는 다음과 같은 방법으로 작성해 주십시오
 
   ## YYYY-MM-DD
   ### Commit
+  
+  - 브랜치: 어떤 브랜치에 commit 했는지
   - 메시지: 커밋 메시지 내용
   - 변경 사항: 어떤 파일/코드가 수정되었는지
   - 의사결정: 왜 이 커밋을 만들었는지, 선택한 이유 또는 설명
@@ -20,34 +22,38 @@ project_log 는 다음과 같은 방법으로 작성해 주십시오
   - 비고: 그 밖에 쓸 점(공지사항 등)
 
   ex)
-  ## 2026-07-06
+  ## 2026-07-07
   ### Commit
-  - 메시지: Add image upload API
-  - 변경 사항: `predict.py`에서 모델 역전파에 대한 7~15 줄 코드 추가
-  - 의사결정: softmax + cross entropy 미분값을 통해 출력층과 은닉층 사이의 역전파를 구현
-  - 배운 점: softmax + cross entropy 의 미분값은 (이상치 y) - y 임
-  - 비고: protest_method 공용 변수의 이름을 pm으로 변경함 이점 유의 바
+  
+  - 브랜치: main
+  - 메시지: Add .gitignore file for Python and Node.js projects
+  - 변경 사항: .gitignore 파일을 docs에 추가함.
+  - 의사결정: 필요없는 파일을 프로젝트에서 숨기기 위해 추가함.
+  - 배운 점: pycharm에서 내장으로 생성하는 .gitignore와 직접 생성한 .gitignore의 역활이 다르다는 것을 배움
+  - 비고: 다음 작업은 .gitignore 작성 예정.
 
 
 
 # 2. push
+
  - ## YYYY-MM-DD
  - ### push
  - 브랜치: 어떤 브랜치에 push 챘는지
- - 히스토리: push할 부분이 이전에 commit된 기록 작성
+ - 히스토리: push할 부분이 이전에 commit된 기록(메시지) 작성
  - 비고: 그 밖에 쓸 점(공지사항 등)
  - 
  ex)
  - ## 2026-07-11
  - ### push
- - 브랜치: eature/ai
- - 히스토리: 2026-06-31, 2026-07-09, 2026-07-11
- - PUll request 여부: 했으면 어떤 branch를 merge 했는지
+ - 브랜치: main
+ - 히스토리:
+   - {Add .gitignore file for Python and Node.js projects, 2026-07-07}
  - 비고:
 
 
 
 # 3. 동아리 활동
+
   - ## YYYY-MM-DD
   - ### 동아리 활동
   - 주제: 활동 주제가 무엇이었는지 
@@ -57,6 +63,8 @@ project_log 는 다음과 같은 방법으로 작성해 주십시오
   ex)
   - ## YYYY-MM-DD
   - ### 동아리 활동
-  - 주제: 활동 주제가 무엇이었는지 
-  - 결론: 각 팀원이 할 점 
-  - 협업 관련: 팀원에게 공유한 내용이나 Pull Request 생성 여부
+  - 주제: 주제 선정 및 역활 분담 
+  - 결론: 
+    -동아리 주제는 "MNIST 웹사이트 만들기"로 결정
+    - 프론트 엔드(), 벡엔드(), 데이터 엔지니어링(), AI()로 역활분
+  - 협업 관련: 
