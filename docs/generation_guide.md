@@ -156,10 +156,10 @@ docs(main): README 수정
   - 프로젝트 주제:
     - GitHub를 활용한 실무형 협업 환경에서의 손글씨 인식 AI 웹 시스템 개발
   - 역할 분담:
-    - Front-end : 홍길동
-    - Back-end : 김철수
-    - Data Engineering : 이영희
-    - AI : 조태현
+    - Front-end : 호진, 준서
+    - Back-end : 민교
+    - Data Engineering : 지훈
+    - AI : 태현
 
 - 협업 관련:
   - Interface Specification 작성 완료
@@ -173,4 +173,5 @@ docs(main): README 수정
 - Commit 후에는 **Commit 로그를 작성**합니다.
 - Push 후에는 **Push 로그를 작성**합니다.
 - 동아리 활동이 있는 날에는 **회의 내용과 역할 분담을 기록**합니다.
+- Pull request는 반드시 **동아리 회의를 통한 승인이 이루어진 후** 생성하야 합니다.
 - 중요한 설계 변경 사항은 반드시 `interface_spec.md`에도 반영합니다.
