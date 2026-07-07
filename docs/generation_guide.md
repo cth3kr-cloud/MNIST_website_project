@@ -1,90 +1,176 @@
-commit은 반드시 다음과 같은 구성을 따라야 합니다.
-## 타입(파트): 간단한 설명
-타입은 다음과 같습니다.
+# 📖 Project Documents Guide
 
+프로젝트에서 사용하는 문서들의 역할과 작성 규칙을 설명합니다.
 
-| 타입           | 의미                    | 예시                           |
-| ------------ | --------------------- | ---------------------------- |
-| **feat**     | 새로운 기능 추가             | `feat(ai): 역전파 알고리즘 구현`          |
-| **fix**      | 버그 수정                 | `fix(ai): Softmax 계산 오류 수정`      |
-| **docs**     | 문서 수정                 | `docs(data): README 업데이트`          |
-| **refactor** | 기능 변화 없는 코드 개선        | `refactor(front-end): Network 클래스 분리`   |
-| **style**    | 코드 스타일 변경(공백, 들여쓰기 등) | `style(backend): 코드 포맷 정리`            |
-| **test**     | 테스트 코드 작성             | `test(ai): DenseLayer 단위 테스트 추가` |
-| **chore**    | 설정 파일 수정 등 기타 작업      | `chore(main): .gitignore 수정`       |
+---
 
+# 📌 Commit Convention
 
+모든 Commit은 아래 형식을 따라 작성합니다.
 
+```text
+<type>(<part>): <description>
+```
 
+예시
 
+```text
+feat(ai): DenseLayer 구현
+fix(backend): 이미지 업로드 오류 수정
+docs(main): README 수정
+```
 
-interface_spec 에서는 각 세부 프로젝트에서 사용할 공용 변수나 함수의 사용처를 명세하는 역활을 하는 md 파일입니다.
+## Commit Type
 
+| 타입 | 의미 | 예시 |
+|------|------|------|
+| **feat** | 새로운 기능 추가 | `feat(ai): 역전파 알고리즘 구현` |
+| **fix** | 버그 수정 | `fix(ai): Softmax 계산 오류 수정` |
+| **docs** | 문서 수정 | `docs(data): README 업데이트` |
+| **refactor** | 기능 변화 없는 코드 개선 | `refactor(front-end): Network 클래스 분리` |
+| **style** | 코드 스타일 변경 (공백, 들여쓰기 등) | `style(backend): 코드 포맷 정리` |
+| **test** | 테스트 코드 작성 | `test(ai): DenseLayer 단위 테스트 추가` |
+| **chore** | 설정 파일 및 기타 작업 | `chore(main): .gitignore 수정` |
 
+---
 
+# 📌 Interface Specification
 
+`interface_spec.md`는 프로젝트의 각 세부 파트에서 공통으로 사용하는 **변수, 함수, 클래스, API** 등을 정의하는 문서입니다.
 
-project_log 에서는 보다 구체적으로 프로젝트 진행 현왕을 작성하는 md 파일입니다.
-project_log 는 다음과 같은 방법으로 작성해 주십시오
+예를 들어,
 
+- AI ↔ Backend
+- Backend ↔ Frontend
 
+간의 인터페이스를 명세합니다.
 
-# 1. commit
+> **인터페이스가 변경될 경우 반드시 해당 문서를 먼저 수정한 후 개발을 진행합니다.**
 
-  ## YYYY-MM-DD
-  ### Commit
-  
-  - 브랜치: 어떤 브랜치에 commit 했는지
-  - 메시지: 커밋 메시지 내용
-  - 변경 사항: 어떤 파일/코드가 수정되었는지
-  - 의사결정: 왜 이 커밋을 만들었는지, 선택한 이유 또는 설명
-  - 배운 점: 작업 중 새로 알게 된 점
-  - 비고: 그 밖에 쓸 점(공지사항 등)
+---
 
-  ex)
-  ## 2026-07-07
-  ### Commit
-  
-  - 브랜치: main
-  - 메시지: Add .gitignore file for Python and Node.js projects
-  - 변경 사항: .gitignore 파일을 docs에 추가함.
-  - 의사결정: 필요없는 파일을 프로젝트에서 숨기기 위해 추가함.
-  - 배운 점: pycharm에서 내장으로 생성하는 .gitignore와 직접 생성한 .gitignore의 역활이 다르다는 것을 배움
-  - 비고: 다음 작업은 .gitignore 작성 예정.
+# 📌 Project Log
 
+`project_log.md`는 프로젝트 진행 상황을 기록하는 문서입니다.
 
+기록은 크게 **Commit**, **Push**, **동아리 활동**으로 나누어 작성합니다.
 
-# 2. push
+---
 
- - ## YYYY-MM-DD
- - ### push
- - 브랜치: 어떤 브랜치에 push 챘는지
- - 히스토리: push할 부분이 이전에 commit된 기록(메시지) 작성
- - 비고: 그 밖에 쓸 점(공지사항 등)
- - 
- ex)
- - ## 2026-07-11
- - ### push
- - 브랜치: main
- - 히스토리:
-   - {Add .gitignore file for Python and Node.js projects, 2026-07-07}
- - 비고:
+## 1️⃣ Commit
 
+### 작성 양식
 
+```md
+## YYYY-MM-DD
 
-# 3. 동아리 활동
+### Commit
 
-  - ## YYYY-MM-DD
-  - ### 동아리 활동
-  - 주제: 활동 주제가 무엇이었는지 
-  - 결론: 각 팀원이 할 점 
-  - 협업 관련: 팀원에게 공유한 내용이나 Pull Request 생성 여부
-  - 
-  ex)
-  - ## YYYY-MM-DD
-  - ### 동아리 활동
-  - 주제: 주제 선정 및 역활 분담 
-  - 결론: 
-    -동아리 주제는 "MNIST 웹사이트 만들기"로 결정
-    - 프론트 엔드(), 벡엔드(), 데이터 엔지니어링(), AI()로 역활분
-  - 협업 관련: 
+- 브랜치:
+- 메시지:
+- 변경 사항:
+- 의사결정:
+- 배운 점:
+- 비고:
+```
+
+### 예시
+
+```md
+## 2026-07-07
+
+### Commit
+
+- 브랜치: main
+- 메시지: chore(main): Add .gitignore file
+- 변경 사항:
+  - .gitignore 생성
+- 의사결정:
+  - 불필요한 파일이 Git에 올라가지 않도록 설정
+- 배운 점:
+  - PyCharm의 .idea/.gitignore와 프로젝트 루트의 .gitignore는 역할이 다르다.
+- 비고:
+  - 다음 작업은 requirements.txt 작성
+```
+
+---
+
+## 2️⃣ Push
+
+### 작성 양식
+
+```md
+## YYYY-MM-DD
+
+### Push
+
+- 브랜치:
+- 포함된 Commit:
+- 비고:
+```
+
+### 예시
+
+```md
+## 2026-07-11
+
+### Push
+
+- 브랜치: main
+
+- 포함된 Commit:
+  - chore(main): Add .gitignore file (2026-07-07)
+  - docs(main): Add README (2026-07-08)
+
+- 비고:
+  - GitHub 원격 저장소와 동기화 완료
+```
+
+---
+
+## 3️⃣ 동아리 활동
+
+### 작성 양식
+
+```md
+## YYYY-MM-DD
+
+### 동아리 활동
+
+- 주제:
+- 결론:
+- 협업 관련:
+```
+
+### 예시
+
+```md
+## 2026-07-12
+
+### 동아리 활동
+
+- 주제:
+  - 프로젝트 주제 선정 및 역할 분담
+
+- 결론:
+  - 프로젝트 주제:
+    - GitHub를 활용한 실무형 협업 환경에서의 손글씨 인식 AI 웹 시스템 개발
+  - 역할 분담:
+    - Front-end : 홍길동
+    - Back-end : 김철수
+    - Data Engineering : 이영희
+    - AI : 조태현
+
+- 협업 관련:
+  - Interface Specification 작성 완료
+  - GitHub 저장소 생성
+```
+
+---
+
+# 📌 작성 규칙
+
+- Commit 후에는 **Commit 로그를 작성**합니다.
+- Push 후에는 **Push 로그를 작성**합니다.
+- 동아리 활동이 있는 날에는 **회의 내용과 역할 분담을 기록**합니다.
+- 중요한 설계 변경 사항은 반드시 `interface_spec.md`에도 반영합니다.
