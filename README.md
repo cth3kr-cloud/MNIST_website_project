@@ -20,6 +20,5 @@
   - backend : python(Fast_API)
   - data_engineering : python(pandas)
   - ai : python
-dkdkdkdkd
 
 
