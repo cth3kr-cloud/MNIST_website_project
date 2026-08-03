@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MNIST 손글씨 판별기</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>MNIST 손글씨 판별기</h1>
+    <div class="container">
 
-    <p>손글씨 이미지를 업로드하세요.</p>
+        <h1 class="title">MNIST 손글씨 판별기</h1>
 
-    <input type="file">
+        <p class="description">
+            손글씨 이미지를 업로드하세요.
+        </p>
 
-    <button>분석하기</button>
+        <div class="upload-section">
+            <input type="file" id="imageInput" accept="image/*">
+        </div>
 
-<script src="script.js"></script>
+        <div class="button-section">
+            <button id="predictBtn" class="predict-btn">
+                분석하기
+            </button>
+        </div>
+
+        <div class="preview-section">
+            <img id="previewImage" src="" alt="미리보기 이미지">
+        </div>
+
+        <div class="result-section">
+            <h2>예측 결과</h2>
+            <p id="resultText">
+                아직 분석하지 않았습니다.
+            </p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
