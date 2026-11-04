@@ -57,19 +57,39 @@ predictBtn.addEventListener("click", function () {
         return;
     }
 
+    // 이미지 파일 가져오기
+    const file = imageInput.files[0];
+
+    // 서버에 전송할 데이터 만들기
+    const formData = new FormData();
+    formData.append("image", file);
     // 분석 시작
     resultText.textContent = "분석을 시작합니다...";
     predictBtn.disabled = true;
     predictBtn.textContent = "분석 중...";
+    // Flask 서버에 이미지 전송
+    fetch("http://127.0.0.1:5000/predict", {
+        method: "POST",
+        body: formData
+    })
+    .then(function (response) {
+        if (!response.ok) {
+            throw new Error("서버에서 오류가 발생했습니다.");
+        }
 
-    // 임시 테스트 코드
-    setTimeout(function () {
-
+        return response.json();
+    })
+    .then(function (data) {
+        resultText.textContent = "예측 결과 : " + data.prediction;
+    })
+    .catch(function (error) {
+        resultText.textContent = "오류가 발생했습니다: " + error.message;
+        console.error(error);
+    })
+    .finally(function () {
         predictBtn.disabled = false;
         predictBtn.textContent = "분석하기";
+    });
 
-        resultText.textContent = "예측 결과 : 7";
-
-    }, 2000);
 
 });
