@@ -23,7 +23,6 @@
   - origin 으로부터 fetch, pull, push 하는 방법을 배움
 - **비고**
 
-
 ## 2026-11-04
 
 ### Commit
