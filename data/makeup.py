@@ -3,6 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.datasets import mnist
 
+def main():
+   pass
+
+if __name__ =="__main__";
+    main()
 # 1. MNIST 데이터셋 수집
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 
